@@ -426,20 +426,24 @@
         <p>Приглашают на свадьбу</p>
     </div>
     <div class="card">
-        <!-- Вступительная часть с персонализированным обращением -->
-        <div class="section fade-up-scroll">
-            <h2>✨ Дорогие наши!</h2>
-            <p style="font-size: 1.1rem;">
-                <span class="family-name">Семья Клевцовых</span> – для нас каждая ваша семья – это отдельная звёздная система. 
-                Именно поэтому мы обращаемся к вам лично, с теплом и трепетом.
-            </p>
-        </div>
-
-        <!-- Основная часть (приглашение) -->
-        <div class="section fade-up-scroll">
-            <h2>🚀 Приглашение</h2>
-            <p>Мы приглашаем вас стать частью нашего космического путешествия – дня, когда две судьбы сольются в одну галактику любви. Разделите с нами этот волшебный вечер, полный радости, счастья и звёздного света.</p>
-        </div>
+        <!-- Вступительная часть с персонализированным приглашением -->
+<div class="section fade-up-scroll">
+    <h2>✨ Дорогие наши</h2>
+    <p style="font-size: 1.1rem;">
+        С неизъяснимой радостью в сердце мы приглашаем разделить с нами этот звёздный час:
+    </p>
+    <div class="family-list" style="margin-top: 1rem; background: rgba(0,0,0,0.3); border-radius: 24px; padding: 1rem;">
+        <p><strong>Семья Гордеевых</strong> в полном составе:</p>
+        <ul style="list-style: none; padding-left: 0; margin-top: 0.5rem;">
+            <li>✓ Андрей</li>
+            <li>✓ Валентина</li>
+            <li>✓ Иван</li>
+            <li>✓ Захар</li>
+            <li>✓ Алена</li>
+        </ul>
+        <p class="helper-text" style="margin-top: 0.8rem;">* Вы можете изменить имена в этом списке, а также добавить или убрать гостей.</p>
+    </div>
+</div>
 
         <!-- Информация о нас + фото -->
         <div class="section fade-up-scroll">
@@ -511,55 +515,41 @@
             <p style="margin-top: 0.8rem;">⭐ Блестящие аксессуары и космические нотки приветствуются!</p>
         </div>
 
-        <!-- Пожелания по подаркам -->
-        <div class="section fade-up-scroll">
-            <h2>🎁 Космические дары</h2>
-            <p><strong>О самом главном:</strong> ваше присутствие – лучший подарок. Но если вы хотите порадовать нас, мы будем благодарны за <strong>финансовую поддержку</strong> – это поможет нам построить свою галактику (ремонт, путешествие мечты и стартовый капитал).</p>
-            <p><strong>Про цветы:</strong> мы обожаем цветы, но знаем, как хлопотно потом увозить 50 букетов. Поэтому предлагаем альтернативу: <strong>один общий букет от всех гостей</strong> (вы можете скинуться по желанию) или <strong>цветы в горшках</strong>, которые останутся с нами надолго. А ещё лучше – просто подарите нам свою улыбку и освободите нас от горы флористики 😉</p>
+        <!-- Пожелания по подаркам (благородный текст) -->
+<div class="section fade-up-scroll">
+    <h2>🎁 О дарах</h2>
+    <p>Для нас нет драгоценнее дара, чем ваше присутствие и тепло ваших сердец. Если же вы пожелаете разделить с нами и материальную радость, мы будем признательны за <strong>финансовое благословение</strong> — оно поможет нам укрепить семейную вселенную, воплотить общие мечты и построить уютный дом, где всегда будет место для вас.</p>
+    <p><strong>О цветах:</strong> Мы трепетно любим живые цветы, но, дабы не омрачать праздник хлопотами о множестве букетов, предлагаем прекрасную альтернативу — <strong>единый букет от всех гостей</strong> (вы можете сложиться по желанию) или <strong>растения в горшках</strong>, которые станут зелёной памятью о нашем дне. А самый нежный дар — просто улыбнитесь нам и подарите своё внимание. 😊</p>
+</div>
+
+        <!-- Подтверждение присутствия с персональными чекбоксами -->
+<div class="section fade-up-scroll">
+    <h2>📡 Подтверждение полёта</h2>
+    <p>Пожалуйста, отметьте, кто из приглашённых сможет быть с нами. Это очень поможет в организации.</p>
+    <form class="rsvp-form" id="rsvpForm">
+        <!-- Динамические чекбоксы будут вставлены сюда скриптом на основе списка из первого блока -->
+        <div id="guestsChecklist" class="form-group" style="background: rgba(0,0,0,0.3); border-radius: 24px; padding: 1rem; margin-bottom: 0.5rem;">
+            <!-- сюда скрипт добавит чекбоксы -->
         </div>
 
-        <!-- Подтверждение присутствия + жильё (улучшенная форма) -->
-        <div class="section fade-up-scroll">
-            <h2>📡 Подтверждение полёта</h2>
-            <p>Пожалуйста, заполните форму, чтобы мы могли подготовиться к вашему прилёту. Это очень поможет в организации.</p>
-            <form class="rsvp-form" id="rsvpForm">
-                <div class="form-group">
-                    <label>✨ Ваше имя и фамилия (или семья) *</label>
-                    <input type="text" id="rsvpName" placeholder="Например: Семья Клевцовых" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>👥 Количество гостей (включая вас) *</label>
-                    <input type="number" id="rsvpGuests" min="1" value="1" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>🚀 Сможете ли вы быть с нами? *</label>
-                    <select id="rsvpAttending" required>
-                        <option value="" disabled selected>– Выберите вариант –</option>
-                        <option value="yes">С радостью прилечу!</option>
-                        <option value="no">К сожалению, не смогу</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label>🏠 Требуется ли жильё?</label>
-                    <select id="rsvpHousing">
-                        <option value="no">Нет, жильё не нужно</option>
-                        <option value="yes">Да, нужно (укажите срок ниже)</option>
-                    </select>
-                    <div class="helper-text">Если вам нужна помощь с ночлегом, мы постараемся предложить варианты.</div>
-                </div>
-                
-                <div class="form-group">
-                    <label>📅 На какой срок? (если нужно жильё)</label>
-                    <input type="text" id="rsvpHousingDates" placeholder="например: с 5 по 7 сентября">
-                </div>
-                
-                <button type="submit">📨 Отправить сигнал</button>
-            </form>
-            <div id="rsvpMessage" class="rsvp-message"></div>
+        <div class="form-group">
+            <label>🏠 Требуется ли жильё?</label>
+            <select id="rsvpHousing">
+                <option value="no">Нет, жильё не нужно</option>
+                <option value="yes">Да, нужно (укажите срок ниже)</option>
+            </select>
+            <div class="helper-text">Если вам нужна помощь с ночлегом, мы постараемся предложить варианты.</div>
         </div>
+        
+        <div class="form-group">
+            <label>📅 На какой срок? (если нужно жильё)</label>
+            <input type="text" id="rsvpHousingDates" placeholder="например: с 5 по 7 сентября">
+        </div>
+        
+        <button type="submit">📨 Отправить подтверждение</button>
+    </form>
+    <div id="rsvpMessage" class="rsvp-message"></div>
+</div>
 
         <!-- Тёплые слова и подпись -->
         <div class="section fade-up-scroll">
@@ -654,6 +644,102 @@
         rsvpForm.style.display = "none";
     });
 
+    // ----- Персональные чекбоксы для RSVP -----
+// Функция, которая собирает список гостей из первого блока (элементы <li> в .family-list)
+function getGuestList() {
+    const items = document.querySelectorAll('.family-list ul li');
+    const guests = [];
+    items.forEach(li => {
+        let name = li.innerText.trim();
+        // убираем символ "✓" если он есть
+        if (name.startsWith('✓')) name = name.substring(1).trim();
+        if (name) guests.push(name);
+    });
+    return guests;
+}
+
+// Создаём чекбоксы
+function buildChecklist() {
+    const container = document.getElementById('guestsChecklist');
+    if (!container) return;
+    const guests = getGuestList();
+    if (guests.length === 0) {
+        container.innerHTML = '<p class="helper-text">Список гостей не найден. Пожалуйста, укажите имена в первом блоке.</p>';
+        return;
+    }
+    let html = '<label style="margin-bottom: 0.5rem; display: block;"><strong>Кто из вас прилетит?</strong></label>';
+    guests.forEach(guest => {
+        html += `
+            <label style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem; cursor: pointer;">
+                <input type="checkbox" name="guest_${guest}" value="yes" style="width: 20px; height: 20px; accent-color: #d4af37;"> 
+                <span>${guest}</span>
+            </label>
+        `;
+    });
+    container.innerHTML = html;
+}
+
+// Вызываем построение чекбоксов после загрузки страницы
+document.addEventListener('DOMContentLoaded', () => {
+    buildChecklist();
+    // Если вы меняете список имён динамически (не нужно), можно перестроить, но для статичного HTML достаточно.
+});
+
+// Переопределяем обработчик отправки формы
+const rsvpFormNew = document.getElementById('rsvpForm');
+if (rsvpFormNew) {
+    // Удаляем старый обработчик, если он был (чтобы не сработал дважды)
+    const newForm = rsvpFormNew.cloneNode(true);
+    rsvpFormNew.parentNode.replaceChild(newForm, rsvpFormNew);
+    
+    newForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Собираем отмеченных гостей
+        const selectedGuests = [];
+        const checkboxes = newForm.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(cb => {
+            if (cb.checked) {
+                // извлекаем имя из атрибута name (guest_Имя)
+                const guestName = cb.getAttribute('name').replace('guest_', '');
+                selectedGuests.push(guestName);
+            }
+        });
+        
+        const housing = document.getElementById('rsvpHousing').value === 'yes';
+        const housingDates = document.getElementById('rsvpHousingDates').value;
+        
+        if (selectedGuests.length === 0) {
+            document.getElementById('rsvpMessage').innerHTML = '❓ Пожалуйста, отметьте хотя бы одного гостя, который сможет присутствовать.';
+            document.getElementById('rsvpMessage').style.color = "#ffaa88";
+            return;
+        }
+        
+        // Формируем данные для отправки
+        const response = {
+            guestsComing: selectedGuests,
+            totalCount: selectedGuests.length,
+            housing,
+            housingDates,
+            fullList: getGuestList()  // для справки
+        };
+        
+        localStorage.setItem('wedding_rsvp_v2', JSON.stringify(response));
+        
+        // Отправка на Formspree
+        fetch('https://formspree.io/f/xdapqzwr', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(response)
+        }).catch(err => console.warn(err));
+        
+        let msg = `✅ Спасибо! Подтверждены: ${selectedGuests.join(', ')}. ${housing ? 'Мы свяжемся по поводу жилья.' : ''}`;
+        document.getElementById('rsvpMessage').innerHTML = msg;
+        document.getElementById('rsvpMessage').style.color = "#d4e6b3";
+        newForm.style.display = "none";
+    });
+}
+    
     // ----- Анимации при скролле -----
     const fadeElements = document.querySelectorAll('.fade-up-scroll');
     const observer = new IntersectionObserver((entries) => {

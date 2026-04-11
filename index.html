@@ -639,13 +639,13 @@
         localStorage.setItem('wedding_rsvp_v2', JSON.stringify(response));
 
         // Здесь можно добавить отправку на почту через Formspree (раскомментируйте и вставьте свой endpoint)
-        /*
-        fetch('https://formspree.io/f/YOUR_ENDPOINT', {
+        
+        fetch('https://formspree.io/f/xdapqzwr', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)
         }).catch(err => console.warn(err));
-        */
+        
 
         let msg = `✅ Спасибо, ${name}! Ваш ответ принят. ${attending === 'yes' ? 'Ждём вас!' : 'Будем скучать!'}`;
         if (housing) msg += ` Мы свяжемся с вами по поводу жилья (${housingDates || 'срок не указан'}).`;

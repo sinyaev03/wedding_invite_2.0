@@ -292,6 +292,74 @@
             z-index: 1;
         }
 
+/* Три квадратных фото */
+.about-us-triple {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.about-card {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+    border-radius: 24px;
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-photo-square {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* квадрат */
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,215,0,0.4);
+}
+
+.about-photo-square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffd966;
+    margin-bottom: 0.3rem;
+}
+
+.about-desc {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 600px) {
+    .about-us-triple {
+        gap: 1rem;
+    }
+    .about-card {
+        min-width: 140px;
+        padding: 0.8rem;
+    }
+    .about-name {
+        font-size: 1rem;
+    }
+    .about-desc {
+        font-size: 0.75rem;
+    }
+}
+        
         @media (max-width: 600px) {
             body { padding: 0.5rem; }
             .container { margin: 1rem auto; border-radius: 32px; }
@@ -348,20 +416,33 @@
             </div>
         </div>
 
-        <!-- Информация о нас + фото -->
-        <div class="section fade-up-scroll">
-            <h2>👩‍🚀 Кто мы</h2>
-            <div class="about-us">
-                <div class="about-us-photo">
-                    <img src="Our photo.jpg" alt="Дмитрий и Диана">
-                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Дмитрий & Диана</p>
-                </div>
-                <div class="about-us-text">
-                    <p>Дмитрий – мечтатель и инженер космических кораблей (ну почти).</p>
-                    <p>Диана – покорительница земных и небесных просторов. Вместе мы создаём свою вселенную, полную любви, смеха и приключений.</p>
-                </div>
+        <!-- Информация о нас – три квадратных фото -->
+<div class="section fade-up-scroll">
+    <h2>👩‍🚀 Кто мы</h2>
+    <div class="about-us-triple">
+        <div class="about-card">
+            <div class="about-photo-square">
+                <img src="Dima.jpg" alt="Дмитрий">
             </div>
+            <p class="about-name">Дмитрий</p>
+            <p class="about-desc">Мечтатель и инженер космических кораблей (ну почти)</p>
         </div>
+        <div class="about-card">
+            <div class="about-photo-square">
+                <img src="Diana.jpg" alt="Диана">
+            </div>
+            <p class="about-name">Диана</p>
+            <p class="about-desc">Покорительница земных и небесных просторов</p>
+        </div>
+        <div class="about-card">
+            <div class="about-photo-square">
+                <img src="Couple.jpg" alt="Дмитрий и Диана вместе">
+            </div>
+            <p class="about-name">Дмитрий & Диана</p>
+            <p class="about-desc">Вместе создаём свою вселенную, полную любви, смеха и приключений</p>
+        </div>
+    </div>
+</div>
 
         <!-- Дата, время, место + карта -->
         <div class="section fade-up-scroll">

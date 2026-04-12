@@ -92,16 +92,6 @@
             gap: 0.5rem;
         }
 
-        /* Персонализированное обращение */
-        .family-name {
-            color: #ffd966;
-            font-weight: bold;
-            font-size: 1.2rem;
-            display: inline-block;
-            border-bottom: 1px dashed #ffd966;
-            margin-top: 0.3rem;
-        }
-
         /* Информация о нас (фото) */
         .about-us {
             display: flex;
@@ -303,117 +293,31 @@
         }
 
         @media (max-width: 600px) {
-    body {
-        padding: 0.5rem;
-    }
-    .container {
-        margin: 1rem auto;
-        border-radius: 32px;
-    }
-    .hero {
-        padding: 2rem 1rem;
-    }
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
-    .card {
-        padding: 1rem;
-    }
-    .section {
-        padding: 1rem;
-        margin: 1.5rem 0;
-    }
-    .section h2 {
-        font-size: 1.4rem;
-    }
-    .names h2 {
-        font-size: 1.8rem;
-    }
-    .names .date {
-        font-size: 1rem;
-    }
-    /* Таймер */
-    .timer {
-        padding: 0.8rem;
-        gap: 0.5rem;
-    }
-    .timer div {
-        min-width: 55px;
-        padding: 0.3rem 0.6rem;
-    }
-    .timer span {
-        font-size: 1.2rem;
-    }
-    /* Блок "О нас" – вертикально и фото меньше */
-    .about-us {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-us-photo img {
-        max-width: 140px;
-        height: auto;
-    }
-    /* Цветовые карточки Pantone – в 2 колонки */
-    .pantone-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
-        justify-items: center;
-    }
-    .pantone-card {
-        width: 100%;
-        max-width: 120px;
-        padding: 0.5rem;
-    }
-    .pantone-swatch {
-        width: 50px;
-        height: 50px;
-    }
-    .pantone-card span {
-        font-size: 0.7rem;
-    }
-    /* Таблица тайминга – блочный вид без горизонтальной прокрутки */
-    .schedule-table td {
-        display: block;
-        width: 100%;
-        padding: 0.4rem 0;
-        border-bottom: none;
-    }
-    .schedule-table td:first-child {
-        font-weight: bold;
-        padding-bottom: 0;
-    }
-    .schedule-table tr {
-        display: block;
-        margin-bottom: 1rem;
-        border-bottom: 1px solid rgba(255,215,0,0.2);
-    }
-    /* Карта */
-    .map-container iframe {
-        height: 200px;
-    }
-    /* Форма RSVP */
-    .rsvp-form input, 
-    .rsvp-form select, 
-    .rsvp-form button {
-        padding: 0.6rem;
-        font-size: 0.9rem;
-    }
-    .form-group label {
-        font-size: 0.85rem;
-    }
-    /* Кнопка календаря, если она есть */
-    .calendar-button {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-    }
-    footer {
-        padding: 1rem;
-    }
-}
+            body { padding: 0.5rem; }
+            .container { margin: 1rem auto; border-radius: 32px; }
+            .hero { padding: 2rem 1rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            .card { padding: 1rem; }
+            .section { padding: 1rem; margin: 1.5rem 0; }
+            .section h2 { font-size: 1.4rem; }
+            .timer { padding: 0.8rem; gap: 0.5rem; }
+            .timer div { min-width: 55px; padding: 0.3rem 0.6rem; }
+            .timer span { font-size: 1.2rem; }
+            .about-us { flex-direction: column; text-align: center; }
+            .about-us-photo img { max-width: 140px; height: auto; }
+            .pantone-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; justify-items: center; }
+            .pantone-card { width: 100%; max-width: 120px; padding: 0.5rem; }
+            .pantone-swatch { width: 50px; height: 50px; }
+            .pantone-card span { font-size: 0.7rem; }
+            .schedule-table td { display: block; width: 100%; padding: 0.4rem 0; border-bottom: none; }
+            .schedule-table td:first-child { font-weight: bold; padding-bottom: 0; }
+            .schedule-table tr { display: block; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,215,0,0.2); }
+            .map-container iframe { height: 200px; }
+            .rsvp-form input, .rsvp-form select, .rsvp-form button { padding: 0.6rem; font-size: 0.9rem; }
+            .form-group label { font-size: 0.85rem; }
+            footer { padding: 1rem; }
+        }
     </style>
 </head>
 <body>
@@ -427,29 +331,28 @@
     </div>
     <div class="card">
         <!-- Вступительная часть с персонализированным приглашением -->
-<div class="section fade-up-scroll">
-    <h2>✨ Дорогие наши</h2>
-    <p style="font-size: 1.1rem;">
-        С радостью мы приглашаем разделить с нами этот звёздный час:
-    </p>
-    <div class="family-list" style="margin-top: 1rem; background: rgba(0,0,0,0.3); border-radius: 24px; padding: 1rem;">
-        <p><strong>Семья Гордеевых</strong> в полном составе:</p>
-        <ul style="list-style: none; padding-left: 0; margin-top: 0.5rem;">
-            <li>✓ Андрей</li>
-            <li>✓ Валентина</li>
-            <li>✓ Иван</li>
-            <li>✓ Захар</li>
-            <li>✓ Алена</li>
-        </ul>
-    </div>
-</div>
+        <div class="section fade-up-scroll">
+            <h2>✨ Дорогие наши</h2>
+            <p style="font-size: 1.1rem;">
+                С радостью мы приглашаем разделить с нами этот звёздный час:
+            </p>
+            <div class="family-list" style="margin-top: 1rem; background: rgba(0,0,0,0.3); border-radius: 24px; padding: 1rem;">
+                <p><strong>Семья Гордеевых</strong> в полном составе:</p>
+                <ul style="list-style: none; padding-left: 0; margin-top: 0.5rem;">
+                    <li>✓ Андрей</li>
+                    <li>✓ Валентина</li>
+                    <li>✓ Иван</li>
+                    <li>✓ Захар</li>
+                    <li>✓ Алена</li>
+                </ul>
+            </div>
+        </div>
 
         <!-- Информация о нас + фото -->
         <div class="section fade-up-scroll">
             <h2>👩‍🚀 Кто мы</h2>
             <div class="about-us">
                 <div class="about-us-photo">
-                    <!-- ЗАМЕНИТЕ ССЫЛКУ НА СВОЮ ФОТОГРАФИЮ -->
                     <img src="Our photo.jpg" alt="Дмитрий и Диана">
                     <p style="font-size: 0.8rem; margin-top: 0.5rem;">Дмитрий & Диана</p>
                 </div>
@@ -467,7 +370,6 @@
             <strong>Время:</strong> 16:00 – сбор гостей<br>
             <strong>Место:</strong> Ресторан «Для вас», г. Пенза, ул. Рахманинова, д. 3</p>
             <div class="map-container">
-                <!-- Код карты от Яндекса (вы уже вставили свой) -->
                 <div style="position:relative;overflow:hidden;">
                     <a href="https://yandex.ru/maps/org/dlya_vas/42921571106/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Для Вас</a>
                     <a href="https://yandex.ru/maps/49/penza/category/restaurant/184106394/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Ресторан в Пензе</a>
@@ -486,7 +388,7 @@
                 <tr><td>17:15 – 17:45</td><td>Фотосессия с гостями и прогулка</td></tr>
                 <tr><td>18:00 – 23:00</td><td>Банкет, развлекательная программа, танцы</td></tr>
                 <tr><td>23:00</td><td>Завершение вечера, космический фейерверк</td></tr>
-             </table>
+              </table>
         </div>
 
         <!-- Дресс-код с карточками Pantone -->
@@ -513,42 +415,19 @@
             </div>
             <p style="margin-top: 0.8rem;">⭐ Блестящие аксессуары и космические нотки приветствуются!</p>
         </div>
-<!
-        <!-- Пожелания по подаркам (благородный текст) -->
-<div class="section fade-up-scroll">
-    <h2>🎁 О дарах</h2>
-    <p>Для нас нет драгоценнее дара, чем ваше присутствие и тепло ваших сердец. Если же вы пожелаете разделить с нами и материальную радость, мы будем признательны за <strong>финансовое благословение</strong> — оно поможет нам укрепить семейную вселенную, воплотить общие мечты и построить уютный дом, где всегда будет место для вас.</p>
-    <p><strong>О цветах:</strong> Мы трепетно любим живые цветы, но, дабы не омрачать праздник хлопотами о множестве букетов, предлагаем прекрасную альтернативу — <strong>единый букет от всех гостей</strong> (вы можете сложиться по желанию).</p>
-</div>
->
-        <!-- Подтверждение присутствия с персональными чекбоксами -->
-<div class="section fade-up-scroll">
-    <h2>📡 Подтверждение полёта</h2>
-    <p>Пожалуйста, отметьте, кто из приглашённых сможет быть с нами. Это очень поможет в организации.</p>
-    <form class="rsvp-form" id="rsvpForm">
-        <!-- Динамические чекбоксы будут вставлены сюда скриптом на основе списка из первого блока -->
-        <div id="guestsChecklist" class="form-group" style="background: rgba(0,0,0,0.3); border-radius: 24px; padding: 1rem; margin-bottom: 0.5rem;">
-            <!-- сюда скрипт добавит чекбоксы -->
+
+        <!-- Подтверждение присутствия с персональными чекбоксами (без жилья) -->
+        <div class="section fade-up-scroll">
+            <h2>📡 Подтверждение полёта</h2>
+            <p>Пожалуйста, отметьте, кто из приглашённых сможет быть с нами. Это очень поможет в организации.</p>
+            <form class="rsvp-form" id="rsvpForm">
+                <div id="guestsChecklist" class="form-group" style="background: rgba(0,0,0,0.3); border-radius: 24px; padding: 1rem; margin-bottom: 0.5rem;">
+                    <!-- сюда скрипт добавит чекбоксы -->
+                </div>
+                <button type="submit">📨 Отправить подтверждение</button>
+            </form>
+            <div id="rsvpMessage" class="rsvp-message"></div>
         </div>
-<!
-        <div class="form-group">
-            <label>🏠 Требуется ли жильё?</label>
-            <select id="rsvpHousing">
-                <option value="no">Нет, жильё не нужно</option>
-                <option value="yes">Да, нужно (укажите срок ниже)</option>
-            </select>
-            <div class="helper-text">Если вам нужна помощь с ночлегом, мы постараемся предложить варианты.</div>
-        </div>
-        
-        <div class="form-group">
-            <label>📅 На какой срок? (если нужно жильё)</label>
-            <input type="text" id="rsvpHousingDates" placeholder="например: с 5 по 7 сентября">
-        </div>
-        >
-        <button type="submit">📨 Отправить подтверждение</button>
-    </form>
-    <div id="rsvpMessage" class="rsvp-message"></div>
-</div>
 
         <!-- Тёплые слова и подпись -->
         <div class="section fade-up-scroll">
@@ -577,17 +456,14 @@
     function updateTimer() {
         const now = new Date().getTime();
         const diff = targetDate - now;
-
         if (diff <= 0) {
             document.getElementById('timer').innerHTML = '<div style="width:100%;">Событие уже наступило! 🎉</div>';
             return;
         }
-
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff % (86400000)) / (3600000));
         const minutes = Math.floor((diff % 3600000) / 60000);
         const seconds = Math.floor((diff % 60000) / 1000);
-
         document.getElementById('days').innerText = days;
         document.getElementById('hours').innerText = hours;
         document.getElementById('minutes').innerText = minutes;
@@ -597,148 +473,121 @@
     setInterval(updateTimer, 1000);
     updateTimer();
 
-    // ----- RSVP с сохранением в localStorage и учётом жилья -----
-    const rsvpForm = document.getElementById('rsvpForm');
-    const rsvpMessage = document.getElementById('rsvpMessage');
-
-    // Проверяем, нет ли уже сохранённого ответа
-    const savedRsvp = localStorage.getItem('wedding_rsvp_v2');
-    if (savedRsvp) {
-        const data = JSON.parse(savedRsvp);
-        rsvpMessage.innerHTML = `🛸 Спасибо, ${data.name}! Вы уже подтвердили участие (гостей: ${data.guests}, жильё: ${data.housing ? 'нужно' : 'не нужно'}). Если данные изменились, напишите нам лично.`;
-        rsvpMessage.style.color = "#ffd966";
-        rsvpForm.style.display = "none";
-    }
-
-    rsvpForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('rsvpName').value.trim();
-        const guests = document.getElementById('rsvpGuests').value;
-        const attending = document.getElementById('rsvpAttending').value;
-        const housing = document.getElementById('rsvpHousing').value === 'yes';
-        const housingDates = document.getElementById('rsvpHousingDates').value;
-
-        if (!name || !attending) {
-            rsvpMessage.innerHTML = '❓ Пожалуйста, укажите имя и выберите, сможете ли вы быть.';
-            rsvpMessage.style.color = "#ffaa88";
-            return;
-        }
-
-        const response = { name, guests, attending, housing, housingDates };
-        localStorage.setItem('wedding_rsvp_v2', JSON.stringify(response));
-
-        // Здесь можно добавить отправку на почту через Formspree (раскомментируйте и вставьте свой endpoint)
-        
-        fetch('https://formspree.io/f/xdapqzwr', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(response)
-        }).catch(err => console.warn(err));
-        
-
-        let msg = `✅ Спасибо, ${name}! Ваш ответ принят. ${attending === 'yes' ? 'Ждём вас!' : 'Будем скучать!'}`;
-        if (housing) msg += ` Мы свяжемся с вами по поводу жилья (${housingDates || 'срок не указан'}).`;
-        rsvpMessage.innerHTML = msg;
-        rsvpMessage.style.color = "#d4e6b3";
-        rsvpForm.style.display = "none";
-    });
-
     // ----- Персональные чекбоксы для RSVP -----
-// Функция, которая собирает список гостей из первого блока (элементы <li> в .family-list)
-function getGuestList() {
-    const items = document.querySelectorAll('.family-list ul li');
-    const guests = [];
-    items.forEach(li => {
-        let name = li.innerText.trim();
-        // убираем символ "✓" если он есть
-        if (name.startsWith('✓')) name = name.substring(1).trim();
-        if (name) guests.push(name);
-    });
-    return guests;
-}
-
-// Создаём чекбоксы
-function buildChecklist() {
-    const container = document.getElementById('guestsChecklist');
-    if (!container) return;
-    const guests = getGuestList();
-    if (guests.length === 0) {
-        container.innerHTML = '<p class="helper-text">Список гостей не найден. Пожалуйста, укажите имена в первом блоке.</p>';
-        return;
-    }
-    let html = '<label style="margin-bottom: 0.5rem; display: block;"><strong>Кто из вас прилетит?</strong></label>';
-    guests.forEach(guest => {
-        html += `
-            <label style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem; cursor: pointer;">
-                <input type="checkbox" name="guest_${guest}" value="yes" style="width: 20px; height: 20px; accent-color: #d4af37;"> 
-                <span>${guest}</span>
-            </label>
-        `;
-    });
-    container.innerHTML = html;
-}
-
-// Вызываем построение чекбоксов после загрузки страницы
-document.addEventListener('DOMContentLoaded', () => {
-    buildChecklist();
-    // Если вы меняете список имён динамически (не нужно), можно перестроить, но для статичного HTML достаточно.
-});
-
-// Переопределяем обработчик отправки формы
-const rsvpFormNew = document.getElementById('rsvpForm');
-if (rsvpFormNew) {
-    // Удаляем старый обработчик, если он был (чтобы не сработал дважды)
-    const newForm = rsvpFormNew.cloneNode(true);
-    rsvpFormNew.parentNode.replaceChild(newForm, rsvpFormNew);
-    
-    newForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Собираем отмеченных гостей
-        const selectedGuests = [];
-        const checkboxes = newForm.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(cb => {
-            if (cb.checked) {
-                // извлекаем имя из атрибута name (guest_Имя)
-                const guestName = cb.getAttribute('name').replace('guest_', '');
-                selectedGuests.push(guestName);
-            }
+    // Функция, которая собирает список гостей из первого блока (элементы <li> в .family-list)
+    function getGuestList() {
+        const items = document.querySelectorAll('.family-list ul li');
+        const guests = [];
+        items.forEach(li => {
+            let name = li.innerText.trim();
+            if (name.startsWith('✓')) name = name.substring(1).trim();
+            if (name) guests.push(name);
         });
-        
-        const housing = document.getElementById('rsvpHousing').value === 'yes';
-        const housingDates = document.getElementById('rsvpHousingDates').value;
-        
-        if (selectedGuests.length === 0) {
-            document.getElementById('rsvpMessage').innerHTML = '❓ Пожалуйста, отметьте хотя бы одного гостя, который сможет присутствовать.';
-            document.getElementById('rsvpMessage').style.color = "#ffaa88";
+        return guests;
+    }
+
+    // Функция для получения фамилии семьи
+    function getFamilyName() {
+        const familyStrong = document.querySelector('.family-list p strong');
+        if (familyStrong) {
+            return familyStrong.innerText.trim();
+        }
+        return "Не указана";
+    }
+
+    // Создаём чекбоксы
+    function buildChecklist() {
+        const container = document.getElementById('guestsChecklist');
+        if (!container) return;
+        const guests = getGuestList();
+        if (guests.length === 0) {
+            container.innerHTML = '<p class="helper-text">Список гостей не найден. Пожалуйста, укажите имена в первом блоке.</p>';
             return;
         }
+        let html = '<label style="margin-bottom: 0.5rem; display: block;"><strong>Кто из вас прилетит?</strong></label>';
+        guests.forEach(guest => {
+            html += `
+                <label style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" name="guest_${guest}" value="yes" style="width: 20px; height: 20px; accent-color: #d4af37;"> 
+                    <span>${guest}</span>
+                </label>
+            `;
+        });
+        container.innerHTML = html;
+    }
+
+    // Обработчик отправки формы
+    function initForm() {
+        const form = document.getElementById('rsvpForm');
+        if (!form) return;
+
+        // Удаляем возможные старые обработчики
+        const newForm = form.cloneNode(true);
+        form.parentNode.replaceChild(newForm, form);
+
+        newForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Собираем отмеченных гостей
+            const selectedGuests = [];
+            const checkboxes = newForm.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    const guestName = cb.getAttribute('name').replace('guest_', '');
+                    selectedGuests.push(guestName);
+                }
+            });
+            
+            if (selectedGuests.length === 0) {
+                document.getElementById('rsvpMessage').innerHTML = '❓ Пожалуйста, отметьте хотя бы одного гостя, который сможет присутствовать.';
+                document.getElementById('rsvpMessage').style.color = "#ffaa88";
+                return;
+            }
+            
+            const familyName = getFamilyName();
+            
+            // Формируем данные для отправки
+            const response = {
+                familyName: familyName,
+                guestsComing: selectedGuests,
+                totalCount: selectedGuests.length,
+                fullList: getGuestList()
+            };
+            
+            // Сохраняем в localStorage
+            localStorage.setItem('wedding_rsvp_v2', JSON.stringify(response));
+            
+            // Отправка на Formspree
+            fetch('https://formspree.io/f/xdapqzwr', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(response)
+            }).catch(err => console.warn(err));
+            
+            let msg = `✅ Спасибо, ${familyName}! Подтверждены: ${selectedGuests.join(', ')}.`;
+            document.getElementById('rsvpMessage').innerHTML = msg;
+            document.getElementById('rsvpMessage').style.color = "#d4e6b3";
+            newForm.style.display = "none";
+        });
+    }
+
+    // Запускаем построение чекбоксов и инициализацию формы после загрузки DOM
+    document.addEventListener('DOMContentLoaded', () => {
+        buildChecklist();
+        initForm();
         
-        // Формируем данные для отправки
-        const response = {
-            guestsComing: selectedGuests,
-            totalCount: selectedGuests.length,
-            housing,
-            housingDates,
-            fullList: getGuestList()  // для справки
-        };
-        
-        localStorage.setItem('wedding_rsvp_v2', JSON.stringify(response));
-        
-        // Отправка на Formspree
-        fetch('https://formspree.io/f/xdapqzwr', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(response)
-        }).catch(err => console.warn(err));
-        
-        let msg = `✅ Спасибо! Подтверждены: ${selectedGuests.join(', ')}. ${housing ? 'Мы свяжемся по поводу жилья.' : ''}`;
-        document.getElementById('rsvpMessage').innerHTML = msg;
-        document.getElementById('rsvpMessage').style.color = "#d4e6b3";
-        newForm.style.display = "none";
+        // Проверяем, нет ли уже сохранённого ответа
+        const savedRsvp = localStorage.getItem('wedding_rsvp_v2');
+        if (savedRsvp) {
+            const data = JSON.parse(savedRsvp);
+            const msg = `🛸 Спасибо, ${data.familyName}! Вы уже подтвердили участие (гостей: ${data.guestsComing.join(', ')}). Если данные изменились, напишите нам лично.`;
+            document.getElementById('rsvpMessage').innerHTML = msg;
+            document.getElementById('rsvpMessage').style.color = "#ffd966";
+            const form = document.getElementById('rsvpForm');
+            if (form) form.style.display = "none";
+        }
     });
-}
-    
+
     // ----- Анимации при скролле -----
     const fadeElements = document.querySelectorAll('.fade-up-scroll');
     const observer = new IntersectionObserver((entries) => {
@@ -749,46 +598,33 @@ if (rsvpFormNew) {
             }
         });
     }, { threshold: 0.1, rootMargin: "0px 0px -20px 0px" });
-
     fadeElements.forEach(el => observer.observe(el));
 
     // --------------------------------------------------------------
-    // НОВЫЙ КОД ДЛЯ КАНВАСА (звёзды, туманности, кометы, метеоры)
+    // КОД ДЛЯ КАНВАСА (звёзды, туманности, кометы, метеоры)
     // --------------------------------------------------------------
     const canvas = document.getElementById('starCanvas');
     const ctx = canvas.getContext('2d');
     
-    let stars = [];          // обычные звёзды (мерцающие)
-    let bigStars = [];       // крупные пульсирующие звёзды
-    let nebulae = [];        // туманности (облака)
-    let comets = [];         // кометы (редкие, с хвостом)
-    let meteors = [];        // падающие звёзды (частые)
-    let spiralGalaxy = null; // вращающаяся галактика
-
+    let stars = [];
+    let bigStars = [];
+    let nebulae = [];
+    let comets = [];
+    let meteors = [];
+    let spiralGalaxy = null;
     let animationId = null;
 
-    // Параметры
-    const STAR_COUNT = 400;          // много мелких звёзд
-    const BIG_STAR_COUNT = 40;       // крупные
-    const NEBULA_COUNT = 6;          // туманности
+    const STAR_COUNT = 400;
+    const BIG_STAR_COUNT = 40;
+    const NEBULA_COUNT = 6;
     const MAX_COMETS = 3;
     const MAX_METEORS = 8;
-    const COMET_SPAWN_RATE = 0.008;   // шанс появления кометы за кадр
-    const METEOR_SPAWN_RATE = 0.03;   // шанс появления метеора
+    const COMET_SPAWN_RATE = 0.008;
+    const METEOR_SPAWN_RATE = 0.03;
 
-    // Вспомогательная функция для случайного числа
-    function randomRange(min, max) {
-        return min + Math.random() * (max - min);
-    }
-
-    // Класс обычной звезды (мерцание)
     class Star {
         constructor(x, y, radius, baseOpacity, twinkleSpeed) {
-            this.x = x;
-            this.y = y;
-            this.radius = radius;
-            this.opacity = baseOpacity;
-            this.twinkleSpeed = twinkleSpeed;
+            this.x = x; this.y = y; this.radius = radius; this.opacity = baseOpacity; this.twinkleSpeed = twinkleSpeed;
             this.direction = Math.random() > 0.5 ? 1 : -1;
         }
         update() {
@@ -804,14 +640,9 @@ if (rsvpFormNew) {
         }
     }
 
-    // Класс крупной пульсирующей звезды (размер и цвет меняются)
     class BigStar {
         constructor(x, y, maxRadius, color, pulseSpeed) {
-            this.x = x;
-            this.y = y;
-            this.maxRadius = maxRadius;
-            this.color = color;
-            this.pulseSpeed = pulseSpeed;
+            this.x = x; this.y = y; this.maxRadius = maxRadius; this.color = color; this.pulseSpeed = pulseSpeed;
             this.radius = maxRadius * 0.6;
             this.phase = Math.random() * Math.PI * 2;
         }
@@ -824,7 +655,6 @@ if (rsvpFormNew) {
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
-            // добавляем свечение
             ctx.shadowBlur = 10;
             ctx.shadowColor = this.color;
             ctx.fill();
@@ -832,21 +662,13 @@ if (rsvpFormNew) {
         }
     }
 
-    // Класс туманности (медленно движущееся полупрозрачное облако)
     class Nebula {
         constructor(x, y, radius, color, speedX, speedY, opacity) {
-            this.x = x;
-            this.y = y;
-            this.radius = radius;
-            this.color = color;
-            this.speedX = speedX;
-            this.speedY = speedY;
-            this.opacity = opacity;
+            this.x = x; this.y = y; this.radius = radius; this.color = color; this.speedX = speedX; this.speedY = speedY; this.opacity = opacity;
         }
         update() {
             this.x += this.speedX;
             this.y += this.speedY;
-            // зацикливание
             if (this.x > canvas.width + this.radius) this.x = -this.radius;
             if (this.x < -this.radius) this.x = canvas.width + this.radius;
             if (this.y > canvas.height + this.radius) this.y = -this.radius;
@@ -865,7 +687,6 @@ if (rsvpFormNew) {
         }
     }
 
-    // Класс кометы (яркая, с длинным хвостом)
     class Comet {
         constructor() {
             this.reset();
@@ -885,9 +706,7 @@ if (rsvpFormNew) {
             this.x += this.speedX;
             this.y += this.speedY;
             this.life -= this.decay;
-            if (this.x > canvas.width + 300 || this.y > canvas.height + 300 || this.life <= 0) {
-                this.active = false;
-            }
+            if (this.x > canvas.width + 300 || this.y > canvas.height + 300 || this.life <= 0) this.active = false;
         }
         draw() {
             ctx.save();
@@ -908,7 +727,6 @@ if (rsvpFormNew) {
         }
     }
 
-    // Класс падающей звезды (метеор) – короткий хвост, летит быстрее
     class Meteor {
         constructor() {
             this.reset();
@@ -928,9 +746,7 @@ if (rsvpFormNew) {
             this.x += this.speedX;
             this.y += this.speedY;
             this.life -= this.decay;
-            if (this.x > canvas.width + 200 || this.y > canvas.height + 200 || this.life <= 0) {
-                this.active = false;
-            }
+            if (this.x > canvas.width + 200 || this.y > canvas.height + 200 || this.life <= 0) this.active = false;
         }
         draw() {
             ctx.save();
@@ -951,20 +767,13 @@ if (rsvpFormNew) {
         }
     }
 
-    // Класс спиральной галактики (статичная, но медленно вращается)
     class SpiralGalaxy {
         constructor(x, y, radius, arms, rotationSpeed) {
-            this.x = x;
-            this.y = y;
-            this.radius = radius;
-            this.arms = arms;
-            this.rotationSpeed = rotationSpeed;
+            this.x = x; this.y = y; this.radius = radius; this.arms = arms; this.rotationSpeed = rotationSpeed;
             this.angle = Math.random() * Math.PI * 2;
             this.opacity = 0.08;
         }
-        update() {
-            this.angle += this.rotationSpeed;
-        }
+        update() { this.angle += this.rotationSpeed; }
         draw() {
             ctx.save();
             ctx.globalAlpha = this.opacity;
@@ -991,130 +800,50 @@ if (rsvpFormNew) {
         }
     }
 
-    // Инициализация всех объектов
     function initStars() {
         stars = [];
         for (let i = 0; i < STAR_COUNT; i++) {
-            const x = Math.random() * canvas.width;
-            const y = Math.random() * canvas.height;
-            const radius = 0.5 + Math.random() * 1.5;
-            const opacity = 0.3 + Math.random() * 0.7;
-            const twinkleSpeed = 0.002 + Math.random() * 0.008;
-            stars.push(new Star(x, y, radius, opacity, twinkleSpeed));
+            stars.push(new Star(Math.random() * canvas.width, Math.random() * canvas.height, 0.5 + Math.random() * 1.5, 0.3 + Math.random() * 0.7, 0.002 + Math.random() * 0.008));
         }
-        
         bigStars = [];
         const colors = ['#ffe0b3', '#ffcc99', '#c2e0ff', '#ffb3ba'];
         for (let i = 0; i < BIG_STAR_COUNT; i++) {
-            const x = Math.random() * canvas.width;
-            const y = Math.random() * canvas.height;
-            const radius = 2 + Math.random() * 4;
-            const color = colors[Math.floor(Math.random() * colors.length)];
-            const pulseSpeed = 0.01 + Math.random() * 0.02;
-            bigStars.push(new BigStar(x, y, radius, color, pulseSpeed));
+            bigStars.push(new BigStar(Math.random() * canvas.width, Math.random() * canvas.height, 2 + Math.random() * 4, colors[Math.floor(Math.random() * colors.length)], 0.01 + Math.random() * 0.02));
         }
-        
         nebulae = [];
         const nebColors = ['rgba(80, 60, 120, 0.3)', 'rgba(100, 70, 140, 0.25)', 'rgba(60, 80, 130, 0.3)', 'rgba(140, 80, 100, 0.2)'];
         for (let i = 0; i < NEBULA_COUNT; i++) {
-            const x = Math.random() * canvas.width;
-            const y = Math.random() * canvas.height;
-            const radius = 80 + Math.random() * 150;
-            const color = nebColors[Math.floor(Math.random() * nebColors.length)];
-            const speedX = (Math.random() - 0.5) * 0.3;
-            const speedY = (Math.random() - 0.5) * 0.2;
-            const opacity = 0.2 + Math.random() * 0.3;
-            nebulae.push(new Nebula(x, y, radius, color, speedX, speedY, opacity));
+            nebulae.push(new Nebula(Math.random() * canvas.width, Math.random() * canvas.height, 80 + Math.random() * 150, nebColors[Math.floor(Math.random() * nebColors.length)], (Math.random() - 0.5) * 0.3, (Math.random() - 0.5) * 0.2, 0.2 + Math.random() * 0.3));
         }
-        
         comets = [];
         meteors = [];
-        
-        // Галактика в центре (немного смещена)
         spiralGalaxy = new SpiralGalaxy(canvas.width * 0.7, canvas.height * 0.3, 120, 3, 0.002);
     }
 
-    function spawnComet() {
-        if (comets.length < MAX_COMETS && Math.random() < COMET_SPAWN_RATE) {
-            comets.push(new Comet());
-        }
-    }
-    
-    function spawnMeteor() {
-        if (meteors.length < MAX_METEORS && Math.random() < METEOR_SPAWN_RATE) {
-            meteors.push(new Meteor());
-        }
-    }
+    function spawnComet() { if (comets.length < MAX_COMETS && Math.random() < COMET_SPAWN_RATE) comets.push(new Comet()); }
+    function spawnMeteor() { if (meteors.length < MAX_METEORS && Math.random() < METEOR_SPAWN_RATE) meteors.push(new Meteor()); }
 
     function animateStars() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        // 1. Рисуем туманности (на самом нижнем слое)
-        nebulae.forEach(nebula => {
-            nebula.update();
-            nebula.draw();
-        });
-        
-        // 2. Галактика
-        if (spiralGalaxy) {
-            spiralGalaxy.update();
-            spiralGalaxy.draw();
-        }
-        
-        // 3. Обычные звёзды
-        stars.forEach(star => {
-            star.update();
-            star.draw();
-        });
-        
-        // 4. Крупные звёзды
-        bigStars.forEach(star => {
-            star.update();
-            star.draw();
-        });
-        
-        // 5. Кометы
-        for (let i = 0; i < comets.length; i++) {
-            const comet = comets[i];
-            comet.update();
-            comet.draw();
-            if (!comet.active) {
-                comets.splice(i, 1);
-                i--;
-            }
-        }
-        
-        // 6. Метеоры
-        for (let i = 0; i < meteors.length; i++) {
-            const meteor = meteors[i];
-            meteor.update();
-            meteor.draw();
-            if (!meteor.active) {
-                meteors.splice(i, 1);
-                i--;
-            }
-        }
-        
-        // Спавн новых
-        spawnComet();
-        spawnMeteor();
-        
+        nebulae.forEach(n => { n.update(); n.draw(); });
+        if (spiralGalaxy) { spiralGalaxy.update(); spiralGalaxy.draw(); }
+        stars.forEach(s => { s.update(); s.draw(); });
+        bigStars.forEach(s => { s.update(); s.draw(); });
+        for (let i = 0; i < comets.length; i++) { const c = comets[i]; c.update(); c.draw(); if (!c.active) { comets.splice(i,1); i--; } }
+        for (let i = 0; i < meteors.length; i++) { const m = meteors[i]; m.update(); m.draw(); if (!m.active) { meteors.splice(i,1); i--; } }
+        spawnComet(); spawnMeteor();
         animationId = requestAnimationFrame(animateStars);
     }
 
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        initStars();  // пересоздаём все объекты под новый размер
-        // также очищаем массивы движущихся объектов, чтобы они не "улетели"
+        initStars();
         comets = [];
         meteors = [];
     }
 
-    window.addEventListener('resize', () => {
-        resizeCanvas();
-    });
-    
+    window.addEventListener('resize', () => { resizeCanvas(); });
     resizeCanvas();
     animateStars();
 </script>
